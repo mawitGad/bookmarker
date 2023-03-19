@@ -12,7 +12,7 @@ export default function useBookmark({
 
   return { name, short, url, openBookmarkEditorUi, openUrl, color };
 
-  function openBookmarkEditorUi(e) {
+  function openBookmarkEditorUi(e: Event) {
     e.stopPropagation();
     setEditor?.(true);
     setEditingBookmark({
