@@ -4,6 +4,8 @@ import {
   useContext,
   useState,
   useEffect,
+  Dispatch,
+  SetStateAction,
 } from "react";
 import { authContextType } from "./types";
 import BookmarkStore from "./bookmarkStore";
@@ -11,9 +13,7 @@ import { BookmarkInterface } from "./types";
 
 const authContextDefaultValues: authContextType = {
   adder: false,
-  setAdder: () => {},
   editor: false,
-  setEditor: () => {},
 };
 
 const AuthContext = createContext<authContextType>(authContextDefaultValues);
