@@ -16,7 +16,7 @@ export default function useBookmark({
   function openBookmarkEditorUi(e: React.MouseEvent<HTMLDivElement>) {
     e.stopPropagation();
     setEditor?.(true);
-    setEditingBookmark({
+    setEditingBookmark?.({
       name,
       url,
       index,
