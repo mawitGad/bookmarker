@@ -7,7 +7,7 @@ import {
 } from "react";
 import { authContextType } from "./types";
 import BookmarkStore from "./bookmarkStore";
-import BookmarkInterface from "./types";
+import { BookmarkInterface } from "./types";
 
 const authContextDefaultValues: authContextType = {
   adder: false,
