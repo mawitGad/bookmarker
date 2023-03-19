@@ -1,4 +1,5 @@
 import { BookmarkInterface } from "./types";
+import { Dispatch, SetStateAction } from "react";
 
 export default class BookmarkStore {
   setBookmarksUi: () => {};
