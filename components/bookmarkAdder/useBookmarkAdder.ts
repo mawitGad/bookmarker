@@ -23,9 +23,9 @@ export default function useBookmarkAdder() {
       if (!ui) return;
       if (!ui.contains(e.target)) setAdder?.(false);
     };
-    window.addEventListener("click", callback);
+    window?.addEventListener("click", callback);
 
-    return () => window.removeEventListener("click", callback);
+    return () => window?.removeEventListener("click", callback);
   }
 }
 

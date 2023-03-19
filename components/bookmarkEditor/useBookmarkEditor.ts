@@ -30,8 +30,8 @@ export default function useBookmarkEditor() {
       if (!ui) return;
       if (!ui.contains(e.target)) setEditor?.(false);
     };
-    window.addEventListener("click", callback);
+    window?.addEventListener("click", callback);
 
-    return () => window.removeEventListener("click", callback);
+    return () => window?.removeEventListener("click", callback);
   }
 }

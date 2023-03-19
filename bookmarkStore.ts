@@ -9,30 +9,30 @@ export default class BookmarkStore {
 
   addBookmark(bookmark: BookmarkInterface) {
     const bookmarks =
-      JSON.parse(window.localStorage.getItem("bookmarks") || "[]") || [];
+      JSON.parse(window?.localStorage.getItem("bookmarks") || "[]") || [];
     bookmarks.push(bookmark);
-    window.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+    window?.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     this.setBookmarksUi(bookmarks);
   }
   editBookmark(bookmark: BookmarkInterface, index: number) {
     const bookmarks = JSON.parse(
-      window.localStorage.getItem("bookmarks") || "[]"
+      window?.localStorage.getItem("bookmarks") || "[]"
     );
     bookmarks[index] = bookmark;
-    window.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+    window?.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     this.setBookmarksUi(bookmarks);
   }
   getBookmarks() {
-    return JSON.parse(window.localStorage.getItem("bookmarks") || "[]") || [];
+    return JSON.parse(window?.localStorage.getItem("bookmarks") || "[]") || [];
   }
   deleteBookmark(index: number) {
     let bookmarks = JSON.parse(
-      window.localStorage.getItem("bookmarks") || "[]"
+      window?.localStorage.getItem("bookmarks") || "[]"
     );
     bookmarks = bookmarks.filter(
       (bookmark: BookmarkInterface, i: number) => i != index
     );
-    window.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+    window?.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     this.setBookmarksUi(bookmarks);
   }
 }
