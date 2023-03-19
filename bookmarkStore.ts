@@ -1,4 +1,4 @@
-import { BookmarkInterface } from "./types.ts";
+import { BookmarkInterface } from "./types";
 
 export default class BookmarkStore {
   setBookmarksUi: () => {};

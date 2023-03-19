@@ -1,4 +1,4 @@
-import { useStore } from "../appContext.tsx";
+import { useStore } from "../appContext";
 
 export default function useIndex() {
   const { adder, editor, bookmarks } = useStore();

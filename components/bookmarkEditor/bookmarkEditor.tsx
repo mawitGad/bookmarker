@@ -1,4 +1,4 @@
-import useBookmarkEditor from "./useBookmarkEditor.ts";
+import useBookmarkEditor from "./useBookmarkEditor";
 
 export default function BookmarkEditor() {
   const { setName, setUrl, editBookmark, name, url, deleteBookmark } =

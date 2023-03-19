@@ -1,5 +1,5 @@
 import { BookmarkProps } from "../../types";
-import { useStore } from "../../appContext.tsx";
+import { useStore } from "../../appContext";
 
 export default function useBookmark({
   name,
@@ -9,7 +9,7 @@ export default function useBookmark({
 }: BookmarkProps) {
   const { setEditor, setEditingBookmark } = useStore();
   const short = name[0].toLocaleUpperCase();
-  
+
   return { name, short, url, openBookmarkEditorUi, openUrl, color };
 
   function openBookmarkEditorUi(e) {

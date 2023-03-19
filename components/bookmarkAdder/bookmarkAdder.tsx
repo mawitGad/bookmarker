@@ -1,4 +1,4 @@
-import useBookmarkAdder from "./useBookmarkAdder.ts";
+import useBookmarkAdder from "./useBookmarkAdder";
 
 export default function BookmarkAdder() {
   const { setName, setUrl, addBookmark } = useBookmarkAdder();

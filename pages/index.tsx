@@ -2,8 +2,8 @@ import Image from "next/image";
 import { useEffect } from "react";
 import Bookmark from "../components/bookmark/bookmark";
 import useIndex from "../hooks/useIndex";
-import BookmarkAdder from "../components/bookmarkAdder/bookmarkAdder.tsx";
-import BookmarkEditor from "../components/bookmarkEditor/bookmarkEditor.tsx";
+import BookmarkAdder from "../components/bookmarkAdder/bookmarkAdder";
+import BookmarkEditor from "../components/bookmarkEditor/bookmarkEditor";
 import AddButton from "../components/addButton/addButton";
 
 export default function Home() {

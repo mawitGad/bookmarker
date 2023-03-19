@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useStore } from "../../appContext.tsx";
+import { useStore } from "../../appContext";
 export default function useBookmarkAdder() {
   const { setAdder, bookmarkStore } = useStore();
   const [name, setName] = useState<string>();

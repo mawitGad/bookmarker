@@ -1,4 +1,4 @@
-import { useStore } from "../../appContext.tsx";
+import { useStore } from "../../appContext";
 
 export default function useAddButton() {
   const { setAdder } = useStore();

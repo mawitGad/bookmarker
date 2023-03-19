@@ -6,8 +6,8 @@ import {
   useEffect,
 } from "react";
 import { authContextType } from "./types";
-import BookmarkStore from "./bookmarkStore.ts";
-import BookmarkInterface from "./types.ts";
+import BookmarkStore from "./bookmarkStore";
+import BookmarkInterface from "./types";
 
 const authContextDefaultValues: authContextType = {
   adder: false,

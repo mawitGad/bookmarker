@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useStore } from "../../appContext.tsx";
+import { useStore } from "../../appContext";
 
 export default function useBookmarkEditor() {
   const { setEditor, editingBookmark, bookmarkStore } = useStore();
