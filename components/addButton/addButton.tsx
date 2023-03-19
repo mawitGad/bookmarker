@@ -1,4 +1,4 @@
-import useAddButton from "./useAddButton.ts";
+import useAddButton from "./useAddButton";
 
 export default function AddButton() {
   const { openBookmarkAdderUi } = useAddButton();
