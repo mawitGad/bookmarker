@@ -15,9 +15,9 @@ export interface BookmarkInterface {
 
 export type authContextType = {
   adder: boolean;
-  setAdder?(): Dispatch<SetStateAction<boolean>>;
+  setAdder?: Dispatch<SetStateAction<boolean>>;
   editor: boolean;
-  setEditor?(): Dispatch<SetStateAction<boolean>>;
+  setEditor?: Dispatch<SetStateAction<boolean>>;
   bookmarkStore?: BookmarkStore;
   bookmarks?: BookmarkInterface[];
   editingBookmark?: BookmarkProps;
