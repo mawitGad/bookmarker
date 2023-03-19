@@ -9,7 +9,7 @@ import {
 } from "react";
 import { authContextType } from "./types";
 import BookmarkStore from "./bookmarkStore";
-import { BookmarkProps } from "./types";
+import { BookmarkProps, BookmarkInterface } from "./types";
 
 const authContextDefaultValues: authContextType = {
   adder: false,
@@ -35,7 +35,7 @@ type Props = {
 export function StoreProvider({ children }: Props) {
   const [adder, setAdder] = useState(false);
   const [editor, setEditor] = useState(false);
-  const [bookmarks, setBookmarks] = useState([]);
+  const [bookmarks, setBookmarks] = useState<BookmarkInterface[]>([]);
   const [editingBookmark, setEditingBookmark] = useState<BookmarkProps>(
     editingBookmarkDefaultValue
   );
