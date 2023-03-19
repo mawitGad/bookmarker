@@ -1,3 +1,75 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+}
+
+logo {
+  font-family: "Oswald", sans-serif;
+}
+
+.bookmark {
+  background: linear-gradient(
+      0deg,
+      rgba(65, 56, 172, 0.2),
+      rgba(65, 56, 172, 0.2)
+    ),
+    rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid #626581;
+}
+.bookmark:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(65, 56, 172, 0.2),
+      rgba(65, 56, 172, 0.2)
+    ),
+    rgba(255, 255, 255, 0.25);
+}
+
+.menu {
+  background: linear-gradient(
+      0deg,
+      rgba(45, 42, 74, 0.93),
+      rgba(45, 42, 74, 0.93)
+    ),
+    rgba(255, 255, 255, 0.13);
+  border: 1px solid #626581;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+
+.input {
+  border: 1px solid #626581;
+  backdrop-filter: blur(5px);
+  border-radius: 34px;
+  background: transparent;
+}
+
+.slide-in {
+  animation: slide-in 1s ease-out;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
