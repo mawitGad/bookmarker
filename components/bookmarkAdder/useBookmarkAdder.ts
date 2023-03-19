@@ -11,7 +11,7 @@ export default function useBookmarkAdder() {
 
   return { setName, setUrl, addBookmark };
 
-  function addBookmark(e: React.MouseEvent<HTMLDivElement>) {
+  function addBookmark(e: React.FormEventHandler<HTMLFormElement>) {
     e.preventDefault();
     bookmarkStore.addBookmark({ name, url, color: get_rand_color() });
     setAdder?.(false);
