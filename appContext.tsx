@@ -36,7 +36,9 @@ export function StoreProvider({ children }: Props) {
   const [adder, setAdder] = useState(false);
   const [editor, setEditor] = useState(false);
   const [bookmarks, setBookmarks] = useState([]);
-  const [editingBookmark, setEditingBookmark] = useState<BookmarkProps>();
+  const [editingBookmark, setEditingBookmark] = useState<BookmarkProps>(
+    editingBookmarkDefaultValue
+  );
   const bookmarkStore = new BookmarkStore(setBookmarks);
 
   useEffect(() => {
