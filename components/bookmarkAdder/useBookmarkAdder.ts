@@ -13,7 +13,7 @@ export default function useBookmarkAdder() {
   function addBookmark(e) {
     e.preventDefault();
     bookmarkStore.addBookmark({ name, url, color: get_rand_color() });
-    setAdder(false);
+    setAdder?.(false);
   }
 
   function close_on_click_outside() {
@@ -21,7 +21,7 @@ export default function useBookmarkAdder() {
       if (!adderLoadFlag.current) return (adderLoadFlag.current = true);
       const ui = document.getElementById("bookmark-adder-ui");
       if (!ui) return;
-      if (!ui.contains(e.target)) setAdder(false);
+      if (!ui.contains(e.target)) setAdder?.(false);
     };
     window.addEventListener("click", callback);
 

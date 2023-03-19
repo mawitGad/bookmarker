@@ -4,6 +4,6 @@ export default function useAddButton() {
   const { setAdder } = useStore();
   return { openBookmarkAdderUi };
   function openBookmarkAdderUi() {
-    setAdder(true);
+    setAdder?.(true);
   }
 }

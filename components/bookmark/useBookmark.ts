@@ -14,7 +14,7 @@ export default function useBookmark({
 
   function openBookmarkEditorUi(e) {
     e.stopPropagation();
-    setEditor(true);
+    setEditor?.(true);
     setEditingBookmark({
       name,
       url,

@@ -16,19 +16,19 @@ export default function useBookmarkEditor() {
       { name, url, color: editingBookmark.color },
       editingBookmark.index
     );
-    setEditor(false);
+    setEditor?.(false);
   }
   function deleteBookmark(e) {
     e.preventDefault();
     bookmarkStore.deleteBookmark(editingBookmark.index);
-    setEditor(false);
+    setEditor?.(false);
   }
 
   function close_on_click_outside() {
     const callback = (e) => {
       const ui = document.getElementById("bookmark-editor-ui");
       if (!ui) return;
-      if (!ui.contains(e.target)) setEditor(false);
+      if (!ui.contains(e.target)) setEditor?.(false);
     };
     window.addEventListener("click", callback);
 
