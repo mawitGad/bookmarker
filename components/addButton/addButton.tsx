@@ -6,7 +6,7 @@ export default function AddButton() {
     <div
       className="max-w-[240px] grow m-2 w-[120px] h-[100px] bookmark flex justify-center items-center transition-all duration-[0.5s]"
       onClick={openBookmarkAdderUi}
-      tabindex={1}
+      tabIndex={1}
     >
       <div>
         <svg
