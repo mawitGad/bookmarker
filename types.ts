@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import BookmarkStore from "./bookmarkStore";
+import { BookmarkStore } from "./bookmarkStore";
 
 export interface BookmarkProps {
   url: string;
