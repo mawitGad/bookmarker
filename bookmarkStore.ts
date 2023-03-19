@@ -2,7 +2,7 @@ import { BookmarkInterface } from "./types";
 
 export default class BookmarkStore {
   setBookmarksUi: () => {};
-  constructor(setBookmarks: () => {}) {
+  constructor(setBookmarks: Dispatch<SetStateAction<BookmarkInterface[]>>) {
     this.setBookmarksUi = setBookmarks;
   }
 
