@@ -4,7 +4,7 @@ import { BookmarkStore } from "./bookmarkStore";
 export interface BookmarkProps {
   url: string;
   name: string;
-  index: string;
+  index: number;
 }
 
 export interface BookmarkInterface {
