@@ -29,7 +29,9 @@ export default class BookmarkStore {
     let bookmarks = JSON.parse(
       window.localStorage.getItem("bookmarks") || "[]"
     );
-    bookmarks = bookmarks.filter((bookmark, i) => i != index);
+    bookmarks = bookmarks.filter(
+      (bookmark: BookmarkInterface, i: number) => i != index
+    );
     window.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     this.setBookmarksUi(bookmarks);
   }
