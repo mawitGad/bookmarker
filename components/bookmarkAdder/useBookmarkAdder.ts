@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { useStore } from "../../appContext";
-import React from "react";
 export default function useBookmarkAdder() {
   const { setAdder, bookmarkStore } = useStore();
   const [name, setName] = useState<string>();
@@ -11,7 +10,7 @@ export default function useBookmarkAdder() {
 
   return { setName, setUrl, addBookmark };
 
-  function addBookmark(e: React.FormEventHandler<HTMLFormElement>) {
+  function addBookmark(e) {
     e.preventDefault();
     bookmarkStore.addBookmark({ name, url, color: get_rand_color() });
     setAdder?.(false);

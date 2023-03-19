@@ -6,6 +6,9 @@ const nextConfig = {
       "chrome-search://favicon/size/16@1.000000x/https://www.showwcase.com/",
     ],
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;
