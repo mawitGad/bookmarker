@@ -2,7 +2,7 @@ import { BookmarkInterface } from "./types";
 import { Dispatch, SetStateAction } from "react";
 
 export default class BookmarkStore {
-  setBookmarksUi: () => {};
+  setBookmarksUi: Dispatch<SetStateAction<BookmarkInterface[]>>;
   constructor(setBookmarks: Dispatch<SetStateAction<BookmarkInterface[]>>) {
     this.setBookmarksUi = setBookmarks;
   }
