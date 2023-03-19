@@ -24,6 +24,6 @@ export default function useBookmark({
     });
   }
   function openUrl() {
-    window?.open(url, "_blank").focus();
+    if (window) window.open(url, "_blank").focus();
   }
 }
