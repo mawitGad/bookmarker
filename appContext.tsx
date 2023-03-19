@@ -16,6 +16,12 @@ const authContextDefaultValues: authContextType = {
   editor: false,
 };
 
+const editingBookmarkDefaultValue: BookmarkProps = {
+  name: "",
+  url: "",
+  index: 0,
+};
+
 const AuthContext = createContext<authContextType>(authContextDefaultValues);
 
 export function useStore(): authContextType {
