@@ -1,5 +1,6 @@
 import { BookmarkProps } from "../../types";
 import { useStore } from "../../appContext";
+import React from "react";
 
 export default function useBookmark({
   name,
@@ -12,7 +13,7 @@ export default function useBookmark({
 
   return { name, short, url, openBookmarkEditorUi, openUrl, color };
 
-  function openBookmarkEditorUi(e: Event) {
+  function openBookmarkEditorUi(e: React.MouseEvent<HTMLDivElement>) {
     e.stopPropagation();
     setEditor?.(true);
     setEditingBookmark({
