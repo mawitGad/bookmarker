@@ -1,6 +1,5 @@
 import { BookmarkProps } from "../../types";
 import useBookmark from "./useBookmark";
-import Link from "next/link";
 
 export default function Bookmark(props: BookmarkProps) {
   const { name, short, url, openBookmarkEditorUi, openUrl, color } =

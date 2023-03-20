@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { BookmarkStore } from "./bookmarkStore";
+import BookmarkStore from "./bookmarkStore";
 
 export interface BookmarkProps {
   url: string;
@@ -20,7 +20,7 @@ export type authContextType = {
   editor: boolean;
   setEditor?: Dispatch<SetStateAction<boolean>>;
   bookmarkStore?: BookmarkStore;
-  bookmarks?: BookmarkInterface[];
-  editingBookmark?: BookmarkProps;
+  bookmarks: BookmarkInterface[];
+  editingBookmark: BookmarkProps;
   setEditingBookmark?: Dispatch<SetStateAction<BookmarkProps>>;
 };

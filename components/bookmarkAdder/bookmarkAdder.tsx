@@ -7,7 +7,6 @@ export default function BookmarkAdder() {
       <form
         id="bookmark-adder-ui"
         className="flex flex-col p-10 menu"
-        onSubmit={addBookmark}
       >
         <label className="">
           <span className="mr-2 inline-block w-[50px]">Name</span>

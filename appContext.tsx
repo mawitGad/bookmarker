@@ -11,16 +11,19 @@ import { authContextType } from "./types";
 import BookmarkStore from "./bookmarkStore";
 import { BookmarkProps, BookmarkInterface } from "./types";
 
-const authContextDefaultValues: authContextType = {
-  adder: false,
-  editor: false,
-};
-
 const editingBookmarkDefaultValue: BookmarkProps = {
   name: "",
   url: "",
   index: 0,
 };
+
+const authContextDefaultValues: authContextType = {
+  adder: false,
+  editor: false,
+  editingBookmark : editingBookmarkDefaultValue,
+  bookmarks : []
+};
+
 
 const AuthContext = createContext<authContextType>(authContextDefaultValues);
 

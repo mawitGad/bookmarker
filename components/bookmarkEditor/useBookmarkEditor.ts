@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, MouseEventHandler } from "react";
 import { useStore } from "../../appContext";
 
 export default function useBookmarkEditor() {
@@ -8,27 +8,29 @@ export default function useBookmarkEditor() {
 
   useEffect(close_on_click_outside, []);
 
-  return { setName, setUrl, editBookmark, name, url, deleteBookmark };
-
-  function editBookmark(e) {
+  const editBookmark : MouseEventHandler<HTMLButtonElement> = (e)=> {
     e.preventDefault();
-    bookmarkStore.editBookmark(
-      { name, url, color: editingBookmark.color },
+    bookmarkStore?.editBookmark(
+      { name, url, color: editingBookmark.color || "" },
       editingBookmark.index
     );
     setEditor?.(false);
   }
-  function deleteBookmark(e) {
+
+  const deleteBookmark : MouseEventHandler<HTMLButtonElement> = (e)=>{
     e.preventDefault();
-    bookmarkStore.deleteBookmark(editingBookmark.index);
+    bookmarkStore?.deleteBookmark(editingBookmark.index);
     setEditor?.(false);
   }
+  return { setName, setUrl, editBookmark, name, url, deleteBookmark };
+
 
   function close_on_click_outside() {
-    const callback = (e) => {
+    const callback = (e : Event) => {
+        const node = e.target as unknown as Node
       const ui = document.getElementById("bookmark-editor-ui");
       if (!ui) return;
-      if (!ui.contains(e.target)) setEditor?.(false);
+      if (!ui.contains(node)) setEditor?.(false);
     };
     window?.addEventListener("click", callback);
 

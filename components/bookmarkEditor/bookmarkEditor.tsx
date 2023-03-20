@@ -8,7 +8,6 @@ export default function BookmarkEditor() {
       <form
         id="bookmark-editor-ui"
         className="flex flex-col p-10 menu"
-        onSubmit={editBookmark}
       >
         <label className="">
           <span className="mr-2 inline-block w-[50px]">Name</span>
