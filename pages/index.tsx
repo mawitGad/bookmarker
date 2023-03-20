@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useEffect } from "react";
 import Bookmark from "../components/bookmark/bookmark";
 import useIndex from "../hooks/useIndex";
 import BookmarkAdder from "../components/bookmarkAdder/bookmarkAdder";

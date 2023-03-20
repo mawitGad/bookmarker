@@ -56,9 +56,18 @@ logo {
   animation: slide-in 1s ease-out;
 }
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@media (pointer : coarse){
+    .menu-icon{
+        opacity: 1;
+    }
+}
 
 @keyframes slide-in {
   0% {
