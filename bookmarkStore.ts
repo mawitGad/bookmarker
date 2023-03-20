@@ -8,16 +8,13 @@ export default class BookmarkStore {
   }
 
   addBookmark(bookmark: BookmarkInterface) {
-    const bookmarks =
-      JSON.parse(window?.localStorage.getItem("bookmarks") || "[]") || [];
+    const bookmarks = JSON.parse(window?.localStorage.getItem("bookmarks") || "[]") || [];
     bookmarks.push(bookmark);
     window?.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     this.setBookmarksUi(bookmarks);
   }
   editBookmark(bookmark: BookmarkInterface, index: number) {
-    const bookmarks = JSON.parse(
-      window?.localStorage.getItem("bookmarks") || "[]"
-    );
+    const bookmarks = JSON.parse(window?.localStorage.getItem("bookmarks") || "[]" );
     bookmarks[index] = bookmark;
     window?.localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     this.setBookmarksUi(bookmarks);

@@ -45,7 +45,9 @@ export function StoreProvider({ children }: Props) {
   const bookmarkStore = new BookmarkStore(setBookmarks);
 
   useEffect(() => {
-    setBookmarks(bookmarkStore.getBookmarks());
+    // * we need to set the bookmark in a use effect to make sure that the window object is available
+    // * given that we fetch the bookmarks from the local storage.
+    setBookmarks(bookmarkStore.getBookmarks()); 
   }, []);
 
   return (
