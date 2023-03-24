@@ -16,7 +16,6 @@ export default function Document() {
         />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.png" />
-        <title>Bookmarker | a bookmark saver</title>
       </Head>
       <body>
         <Main />
